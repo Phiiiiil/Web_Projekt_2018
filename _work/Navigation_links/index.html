@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de" class="js-off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="css/screen.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+</head>
+
+<body>
+<div id="container">
+
+
+<div id="nav">
+  <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+  <a href="index.html">Home</a> 
+  <a href="eins.html">Button 1</a> 
+  <a href="zwei.html">Button 2</a> 
+  <a href="drei.html">Button 3</a> 
+  <a href="vier.html">Button 4</a> 
+  </div>
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ MENU</span> </div>
+ 
+    
+          
+<div id="header">
+Titel
+</div>
+  <div id="content">
+  index.html<br>
+ In der Heidelandschaft, die sich dem Kliff anschließt, wächst eine Reihe äußerst seltener Pflanzen, darunter sogar, der aus den Alpen bekannte Lungenenzian. Diese botanische Kostbarkeit steht unter strengem Naturschutz.
+Zu den weiteren botanischen Raritäten in der Morsumer Heide zählen das Gefleckte Knabenkraut – eine Orchideenart – sowie der Sonnentau mit seinen winzigen, weißen Blüten.
+Doch auch die Fauna wird Sie begeistern. Hier lebt eine Vielzahl an Tierarten, vor allem Schmetterlinge und Seevögel, die hier bei Ebbe auf Nahrungssuche gehen und am Strand sowie am Kliff Ihre Brutstätten bauen. 
+Der abwechslungsreichen Umgebung des Morsum-Kliffs mit der Heidelandschaft, einzigartiger Tier- und Pflanzenwelt, dem Weltnaturerbe Wattenmeer und den aus der Steinzeit stammenden Hünengräbern sollten Sie bei einem Spaziergang ausreichend Aufmerksamkeit schenken.
+</div>
+  
+  
+
+</div>
+
+<div id="footer">
+ footer
+</div>
+
+<script>
+$(document).ready(function(){
+ 
+  $("a").on('click', function(event) {
+
+   
+    if (this.hash !== "") {
+    
+      event.preventDefault();
+
+     
+      var hash = this.hash;
+
+      
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script> 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script> 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+
+
+</body>
+</html>

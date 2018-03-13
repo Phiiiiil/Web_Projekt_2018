@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de" class="js-off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="css/screen.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+</head>
+
+<body>
+<div id="container">
+
+
+<div id="nav">
+  <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+  <a href="index.html">Home</a> 
+  <a href="eins.html">Button 1</a> 
+  <a href="zwei.html">Button 2</a> 
+  <a href="drei.html">Button 3</a> 
+  <a href="vier.html">Button 4</a> 
+  </div>
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ MENU</span> </div>
+ 
+    
+          
+<div id="header">
+Titel
+</div>
+  <div id="content">
+  eins.html<br>
+  Eine einmalige Natur finden Sie auf Sylt am Morsum-Kliff ganz im Osten der Insel. Von atemberaubender Schönheit ist das imposante Kliff, in seinem geologischen Aufbau einmalig in ganz Europa.
+Nebeneinander finden sich dort drei Erdschichten, die drei bis acht Millionen Jahre alt sind. Ursprünglich lagen diese drei Schichten übereinander, wurden in der Eiszeit aber von Gletschern unter ungeheurem Druck aufgebrochen und nebeneinander aufgefächert.
+
+Das 1.800 Meter lange und bis zu 21 Meter hohe Kliff war bereits 1923 als eines der ersten Gebiete auf Sylt und sogar in Schleswig-Holstein unter Naturschutz gestellt worden.
+</div>
+  
+  
+
+</div>
+
+<div id="footer">
+ footer
+</div>
+
+<script>
+$(document).ready(function(){
+ 
+  $("a").on('click', function(event) {
+
+   
+    if (this.hash !== "") {
+    
+      event.preventDefault();
+
+     
+      var hash = this.hash;
+
+      
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script> 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script> 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+
+
+</body>
+</html>

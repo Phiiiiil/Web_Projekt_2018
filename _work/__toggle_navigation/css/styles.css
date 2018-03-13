@@ -1,0 +1,50 @@
+
+  /* padding für Layoutbereiche */ 
+ 
+  main {
+    padding: 12px;
+  }
+.navmain{
+	padding-left: 12px;
+	padding-bottom: 12px;
+	padding-right: 12px;
+}
+
+  /* Kopf- und Fußbereich einfärben */ 
+  .pageheader {
+    background-color:#C93;
+    color: white; 
+  } 
+
+  /* Pageheader */ 
+  .pageheader h1 {
+  font-family: Dosis, 'Open Sans', sans-serif; 
+  font-size: 32px; 
+ letter-spacing: 1px; 
+    color: white;
+    line-height: 1;
+    padding: 0;
+    margin: 0 0 5px 0;
+  }
+  .pageheader a 
+   {
+    color: white;
+    text-decoration: none;
+  }
+ 
+  /* 
+  In visuellen Layouts verstecken, aber Screenreader lesen das Element vor 
+  github.com/h5bp/html5-boilerplate/issues/194#issuecomment-564745 
+  */  
+  .hideme {
+    border: 0;
+    clip: rect(0 0 0 0); 
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+ 

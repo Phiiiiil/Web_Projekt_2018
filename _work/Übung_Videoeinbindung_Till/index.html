@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de" class="js-off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoohandlung</title>
+<link href="css/screen.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" media="screen" href="css/screen.css" />
+<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+<script type="text/javascript" language="JavaScript">
+<!--
+
+// www.web-toolbox.net
+
+// Anzeigezeit in ms
+var WechselZeit = 3000;
+
+ImageArr = new Array()
+
+// URL der Bilder  hier eintragen
+ImageArr[ImageArr.length] = "img/papagei-01.png";
+ImageArr[ImageArr.length] = "img/papagei-02.png";
+ImageArr[ImageArr.length] = "img/papagei-03.png";
+ImageArr[ImageArr.length] = "img/papagei-04.png";
+ImageArr[ImageArr.length] = "img/papagei-05.png";
+
+var xAnzahl = ImageArr.length;
+var xCounter=-1;
+
+function Bildwechsel01() {
+xCounter = xCounter+1;
+  if (xCounter < xAnzahl) {
+     document.getElementById('Foto01').src = ImageArr[xCounter];
+     setTimeout ("Bildwechsel01()",WechselZeit);
+     }
+  else {
+     xCounter = -1;
+     Bildwechsel01();
+     }
+}
+
+// Startverzögerung
+setTimeout('Bildwechsel01()', 3000);
+
+// -->
+</script>
+
+</head>
+
+<body>
+<div id="container">
+<div id="o"></div>
+  <div id="header">
+  <div id="drei">
+  <div id="zwei"> 
+  <div id="titel"><h1>Zoohandlung</h1></div> <br> <h2>Spezialist für Papageien und Sittiche</h2>
+  </div>
+  <div id="eins"></div>
+  </div>
+  </div>
+  <div id="navigation">
+  <ul>
+<li><a href="index.html" class="auswahl" title="ERSTE">ERSTE</a></li>
+<li><a href="zwei.html" title="ZWEITE">ZWEITE</a></li>
+<li><a href="drei.html" title="DRITTE">DRITTE</a></li>
+</ul>
+</div>
+  <div id="l">Wir bieten unseren Kunden individuelle Serviceleistungen, die Ihnen den Einkauf in unserer Zoohandlung angenehm und einfach machen.<br> 
+<br>Wir wollen, dass Sie sich ausführlich beraten fühlen und freuen uns über das Wohlergehen Ihrer tierischen Mitbewohner.<br><br>
+Wenn Sie Zubehör für Ihre Papageien und Sittiche suchen, bekommen Sie bei uns, was die lieben Vögelchen täglich brauchen. Für besondere Ansprüche fertigen wir individuelle Käfige nach Maß.<br><br>
+
+Graupapageien, Loris, Wellensittiche und Kakadus warten auf ihre neuen Besitzer.
+</div>
+  <div id="r"><img id="Foto01" src="img/papagei_nuss.png" width="250" height="360" alt=""></div>
+  <div class="float-ende"></div>
+  <div id="footer"><a href="impressum.html" class="imp" title="Impressum">Impressum</a></div>
+  <div id="u"></div>
+  
+  
+</div>
+
+</body>
+</html>

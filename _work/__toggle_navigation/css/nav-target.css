@@ -1,0 +1,103 @@
+/* Navigation für kleine Viewports mit :target */ 
+/* Benutzt die ID #menu, die an body vergeben wurde */ 
+
+@media screen and (max-width: 599px) { 
+
+  /* Kopfbereich vorbereiten */ 
+  .pageheader {
+    position: relative;
+  }
+
+  /* Menübutton positionieren */ 
+  div.menubutton {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+  }
+
+  /* Menübutton gestalten */ 
+  div.menubutton a {
+    display: block; 
+    color: white;
+    background-color:darkred;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+  }
+
+  /* Pfeile nach und nach unten */ 
+  div.menubutton a.showmenu:after {
+    content: " \25bc"; /* Pfeil nach unten */ 
+    font-size: 7px; 
+  }
+  div.menubutton a.hidemenu:after {
+    content: " \25b2"; /* Pfeil nach oben */ 
+    font-size: 7px; 
+  }  
+  /* Menübutton ausblenden */ 
+  div.menubutton a.hidemenu {
+    display:none; 
+  }
+
+ 
+  /* Grundformatierung für den Navigationsbereich */ 
+  .navmain {
+    padding: 0 30px; 
+    margin: 0;
+    background: white;
+  }
+  /* Die Navigationsliste gestalten */ 
+  .navlist {
+    overflow: hidden; 
+    transition: 0.25s;  
+    list-style-type: none;
+    padding-left: 0; 
+    border-radius: 0 0 10px 10px;
+    margin: 0; 
+  }
+  .navlist li { 
+    display: block; 
+    border-bottom: 1px solid #ddd; 
+  }
+  .navlist li:last-of-type {
+    border-bottom: 0;
+  }
+
+  /* Die Links im Navigationsbereich gestalten */ 
+  .navlist a {
+    display: block; 
+    text-decoration: none;
+    background-color: yellowgreen;
+    color: #333;
+    padding: 10px; 
+  }
+  .navlist a.active {
+    background-color:yellow;
+    color:darkred;
+    text-decoration: none; 
+  } 
+	
+	
+	.navlist a:hover{
+		background-color:greenyellow;
+		color:white;
+	}
+	
+	
+  /* Navigationsliste ausblenden */ 
+  .navlist { max-height: 0; } 
+
+  /* Wenn #menu in der URL steht, die Navigationsliste einblenden */ 
+  /* Den Wert für max-height ggf. an die Länge der Navigation anpassen */ 
+  #menu:target .navlist { max-height: 250px; }
+
+  /* Button mit Pfeil nach unten ausblenden */
+  #menu:target a.showmenu { display: none; }
+  /* Button mit Pfeil nach oben einblenden */
+  #menu:target a.hidemenu { display: block; }
+
+
+} /* Ende @media */ 

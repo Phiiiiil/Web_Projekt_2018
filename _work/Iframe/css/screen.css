@@ -1,0 +1,95 @@
+﻿
+* {
+	margin:0;
+	padding:0;
+}
+
+.iframe-wrapper{
+	position:relative;
+	padding-bottom:50%;
+	height:0;}
+	iframe{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;}
+
+body {
+	font-family:"Arial";
+
+
+}
+
+#container {
+	max-width:80%;
+	margin:auto;
+	background-image:url(../img/titelhintergrund.png);
+	
+	color:#FFFFFF;
+	font:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	padding:2%;
+	
+
+	
+}
+
+#rand{
+	height:20px;
+	background-image:url(../img/titelhintergrund.png);
+	float:right;
+	padding-top:6px;
+	padding-right:12px;
+	}
+#rand li {
+	padding-bottom:15px;
+	display:inline;
+}
+#rand a {
+	color:#FFFFFF;
+}		
+	
+#header {
+	height:50px;
+	background-image: url(../img/titelhintergrund.png);
+	
+	height:154px;
+}
+
+h1 {
+	color:white;
+	font-size:28px;
+	padding-left:4%;
+}
+
+article{
+	padding-bottom:100px;
+	padding-left:10%;
+	padding-right:10%;}
+
+
+
+
+
+
+#bild1{
+	max-width:100%;
+	height:auto;
+	}		
+		
+img {
+	max-width:100%;
+	height:auto;
+	
+}	
+
+ @media screen and (max-width:1000px) {
+
+#container {
+	max-width: 100%;
+}
+
+ }
+
+

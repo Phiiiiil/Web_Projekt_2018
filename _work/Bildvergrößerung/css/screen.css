@@ -1,0 +1,77 @@
+﻿
+* {
+	margin:0;
+	padding:0;
+	}
+
+
+
+body {
+	font-family:"Arial";
+
+
+}
+
+#container {
+	max-width:80%;
+	margin:auto;
+	background-image:url(../img/titelhintergrund.png);
+	
+	color:#FFFFFF;
+	font:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	padding:2%;
+	
+
+	
+}
+
+
+	
+
+
+article ul{
+	padding:0;
+	margin:0;}
+	article li{
+		display:inline-block;
+		list-style-type:none;
+		width:20rem;
+		padding:0;
+		margin:0.5rem;
+	}
+
+li:first-of-type{
+	margin-left:0;
+}
+li:last-of-type{
+	margin-right:0;}
+	
+li:hover{
+	-webkit-transform::scale(1.2);
+	-webkit-transition: all 1s ease;
+	-ms-transform:scale(1.2);
+	transform:scale(1.2);
+	transition: all 1s ease;
+}
+li{
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function:ease;}
+img {
+	max-width:100%;
+	border: 0.23rem solid red;
+	
+	
+	
+}	
+
+ @media screen and (max-width:1000px) {
+
+#container {
+	max-width: 100%;
+}
+
+ }
+
+

@@ -1,0 +1,38 @@
+@media screen and (min-width: 600px) {
+
+  div.menubutton { display: none; }
+
+  .pageheader {
+    margin-bottom: 15px;
+  }
+  .navlist {
+    padding: 0;
+    margin: 0;
+  }
+  .navlist li {
+    list-style-type: none; 
+    display: inline-block;
+	  
+  }
+  .navlist a {
+    display: block;
+    min-width: 100px;
+    background-color:yellowgreen;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 0px 0px 0px 10px;
+  }
+  .navlist a.active {
+    background-color:darkred;
+    color: #fff;
+    text-decoration: none; 
+  }
+  .navlist a:hover,
+  .navlist a:focus {
+    text-decoration: underline;
+  }
+
+} /* Ende @media */
